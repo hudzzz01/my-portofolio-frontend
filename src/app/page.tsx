@@ -5,6 +5,8 @@ import { store } from "./redux/store/store";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import Porto from "./components/Porto";
+import Footer from "./components/Footer";
+
 
 
 export default function Home() {
@@ -15,6 +17,7 @@ export default function Home() {
             <Hero/>
             <AboutMe/>
             <Porto/>
+            <Footer />
        </Provider>
     </div>
     

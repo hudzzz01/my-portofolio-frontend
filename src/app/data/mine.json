@@ -5,5 +5,63 @@
     "jabatan" : "Software Engineer",
     "email" : "hudzaifahzzzzzz@gmail.com",
     "phone" : "+62-895-3669-75992",
-    "wa" : "62895366975992"
+    "wa" : "62895366975992",
+    "usernameGithub" : "hudzzz01",
+    "porto" : [
+        {
+            "nama" : "Steganografi-EOF Web App",
+            "description" : " Hide secret messages in images using Java Spring Boot + React.",
+            "image" : "/stegano1.jpg",
+            "link" : "https://github.com/hudzzz01"
+        },
+        {
+            "nama" : "Rekap Zakat App",
+            "description" : " Internal tool for mosque zakat collection (Ramadan 2024).",
+            "image" : "/zakat.jpg",
+            "link" : "https://github.com/hudzzz01"
+        },
+        {
+            "nama" : "BMI Web Calculator",
+            "description" : " Built with React + localStorage.",
+            "image" : "/bmi.jpg",
+            "link" : "https://github.com/hudzzz01"
+        },
+        {
+            "nama" : "Landing Page: Bengkel Mobil Willy Motor",
+            "description" : " Pamulang-based auto shop landing page.",
+            "image" : "landingpage.png",
+            "link" : "https://github.com/hudzzz01"
+        },
+        {
+            "nama" : "Capstone: Paddy Cure (Bangkit 2023)",
+            "description" : "Paddy plant disease detection app using Node.js + Flask backend.",
+            "image" : "paddy.jpeg",
+            "link" : "https://github.com/hudzzz01"
+        },
+        {
+            "nama" : "Ceramind OCR KTP",
+            "description" : "Backend developer for personal data detection app (OCR + Flask + AI).",
+            "image" : "/ocr.jpeg",
+            "link" : "https://github.com/hudzzz01"
+        },
+        {
+            "nama" : "Cisco Network Automation",
+            "description" : "Python script to automate Cisco configuration (PT. ICON+).",
+            "image" : "/network.jpg",
+            "link" : "https://github.com/hudzzz01"
+        },
+        {
+            "nama" : "Instagram Clone (Playground)",
+            "description" : "Built with React.js.",
+            "image" : "/ig.webp",
+            "link" : "https://github.com/hudzzz01"
+        },
+        {
+            "nama" : "Native Block Chain Java (Playground)",
+            "description" : "Built with Spring Boot",
+            "image" : "/blockchain.png",
+            "link" : "https://github.com/hudzzz01"
+        }
+
+    ]
 }
