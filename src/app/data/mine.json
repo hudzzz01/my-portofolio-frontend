@@ -29,13 +29,13 @@
         {
             "nama" : "Landing Page: Bengkel Mobil Willy Motor",
             "description" : " Pamulang-based auto shop landing page.",
-            "image" : "landingpage.png",
+            "image" : "/landingpage.png",
             "link" : "https://github.com/hudzzz01"
         },
         {
             "nama" : "Capstone: Paddy Cure (Bangkit 2023)",
             "description" : "Paddy plant disease detection app using Node.js + Flask backend.",
-            "image" : "paddy.jpeg",
+            "image" : "/paddy.jpeg",
             "link" : "https://github.com/hudzzz01"
         },
         {

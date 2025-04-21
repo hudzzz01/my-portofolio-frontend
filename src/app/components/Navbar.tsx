@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 import React, { useState } from 'react'
 import { CiDark, CiMenuKebab } from 'react-icons/ci'
 import { useDispatch, useSelector } from 'react-redux';
@@ -6,7 +6,15 @@ import { setDarkMode } from '../redux/slice/themeSlice';
 import { IoSunnyOutline } from 'react-icons/io5';
 
 export default function Navbar() {
-    const themeLight = useSelector((state: any) => state.theme.theme.isDark);
+    type RootState = {
+        theme: {
+          theme: {
+            isDark: boolean;
+          };
+        };
+      };
+      
+    const themeLight = useSelector((state: RootState) => state.theme.theme.isDark);
     const dispatch = useDispatch();
 
     const [isSmallMenu, setIsSmallMenu] = useState(false)
@@ -14,6 +22,8 @@ export default function Navbar() {
     const handleSmallMenu = () => {
         setIsSmallMenu(!isSmallMenu)
     }
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleClickNavbarButton = (item: any) => {
         if(item == "Explorer"){
             window.location.href = ""
