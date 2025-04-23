@@ -1,7 +1,17 @@
 import React, { useRef, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 const BinaryRain: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  type RootState = {
+    theme: {
+      theme: {
+        isDark: boolean;
+      };
+    };
+  };
+  const themeLight = useSelector((state: RootState) => state.theme.theme.isDark);
+
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -19,10 +29,21 @@ const BinaryRain: React.FC = () => {
 
     const draw = () => {
       // background dengan transparansi untuk efek trail
-      ctx.fillStyle = 'rgb(255, 255, 255)';
+
+      if(themeLight){
+        ctx.fillStyle = 'oklch(27.9% 0.041 260.031)';
+      }else{
+        ctx.fillStyle = 'rgb(255, 255, 255)';
+      }
+
+     
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = '#000'; // warna teks hijau
+      if(themeLight){
+        ctx.fillStyle = 'oklch(64.8% 0.2 131.684)'; // warna teks hijau
+      }else{
+        ctx.fillStyle = '#000'; // warna teks hijau
+      }
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < columns; i+=3) {
@@ -42,7 +63,7 @@ const BinaryRain: React.FC = () => {
       requestAnimationFrame(draw);
     };
 
-    draw();
+    draw()
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
@@ -53,7 +74,7 @@ const BinaryRain: React.FC = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [themeLight]);
 
   return (
     <canvas

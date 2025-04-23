@@ -3,13 +3,23 @@ import json from '@/app/data/mine.json'
 import Image from 'next/image'
 import TypingText from './TypingText'
 import { FaWhatsapp } from 'react-icons/fa'
+import { useSelector } from 'react-redux'
 
 export default function AboutMe() {
+    type RootState = {
+        theme: {
+          theme: {
+            isDark: boolean;
+          };
+        };
+      };
+    const themeLight = useSelector((state: RootState) => state.theme.theme.isDark);
+
     const [hoverPhoneNumber, setHoverPhoneNumber] = React.useState(false)
     const {about} = json
   return (
     <div className='w-full '>
-        <div className=' sm:h-300 bg-gray-100 lg:ps-10 flex flex-col lg:flex-row'>
+        <div className={`sm:h-300 ${!themeLight ? 'bg-gray-100 text-gray-800' : 'bg-gray-900 text-slate-400' } lg:ps-10 flex flex-col lg:flex-row`}>
 
             <div className='lg:w-1/2 w-full flex flex-col gap-5 justify-center items-center p-8 lg:p-20 text-justify'>
             <div className=''>
@@ -27,7 +37,17 @@ export default function AboutMe() {
             <p className='text-lg sm:text-lg lg:text-xl text-2xl'>{about}</p>
         </div>
         <div className=' lg:w-1/2 flex flex-col gap-2 justify-center items-center p-20 text-justify'>
+        {
+            !themeLight ?   
             <Image src={json.urlPhoto} width={500} height={500} className='opacity-80 rounded-lg hover:opacity-85 transform-3d hover:translate-x-15 hover:rotate-y-1 hover:rotate-x-4 transition-all duration-2000 ease-in-out' alt="hero" />
+            :
+            <div>
+                <Image src={json.urlPhoto2} width={500} height={500} className='opacity-80 rounded-lg hover:opacity-70 brightness-50 transform-3d hover:translate-x-15 hover:rotate-y-1 hover:rotate-x-4 transition-all duration-2000 ease-in-out' alt="hero" />
+             </div>
+
+        }
+           
+             
         </div>
 
         </div>

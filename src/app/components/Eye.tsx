@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 
-const Eye: React.FC = () => {
+interface data {
+  pupilColor : string
+}
+
+const Eye: React.FC<data> = ({pupilColor} : data) => {
   const eyeRef = useRef<HTMLDivElement>(null);
   const pupilRef = useRef<HTMLDivElement>(null);
 
@@ -52,7 +56,7 @@ const Eye: React.FC = () => {
           width: '20px',
           height: '20px',
           borderRadius: '50%',
-          backgroundColor: '#555',
+          backgroundColor: pupilColor,
           position: 'absolute',
           transition: 'transform 0.05s ease-out',
 
