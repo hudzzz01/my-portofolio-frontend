@@ -8,6 +8,7 @@ export default function Porto() {
     <div className='flex w-full min-h-300 flex-col'>
          <div className="flex flex-col gap-2 items-center w-full text-2xl lg:text-3xl mt-10 mb-10">
              <div className='flex flex-row gap-2 '>
+                
                   <IoIosDocument /> Download CV saya di sini 
              </div>
             <a 

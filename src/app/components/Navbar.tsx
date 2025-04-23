@@ -67,6 +67,7 @@ export default function Navbar() {
                     )
                 })}
             </div>
+            
 
 
             <div className=' me-10 md:hidden flex gap-2' >

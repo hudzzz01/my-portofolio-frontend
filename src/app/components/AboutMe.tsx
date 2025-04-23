@@ -53,7 +53,8 @@ export default function AboutMe() {
              
         </div>
 
-        </div>
+        </div>   {themeLight &&     <div className='font-bold text-2xl ms-40 text-red-500 italic' >Work in progress</div>}
+
    
 </div>
   )
