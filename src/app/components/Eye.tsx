@@ -55,6 +55,7 @@ const Eye: React.FC = () => {
           backgroundColor: '#555',
           position: 'absolute',
           transition: 'transform 0.05s ease-out',
+
         }}
       />
     </div>

@@ -15,7 +15,7 @@ interface data {
 export default function CardProject({ name, imageUrl, description, source, link } : data) {
     const router = useRouter()
     return (
-    <div className="max-w-sm hover:scale-110 transition-all duration-300 ease-in-out rounded-2xl shadow-lg overflow-hidden p-4 bg-white" onClick={() => router.push(link)} >
+    <div className="sm:max-w-sm hover:scale-110 transition-all duration-300 ease-in-out rounded-2xl shadow-lg overflow-hidden p-4 bg-white" onClick={() => router.push(link)} >
       <Image width={500} height={500}
         src={imageUrl}
         alt='hero'
@@ -28,6 +28,6 @@ export default function CardProject({ name, imageUrl, description, source, link 
       <p className="mt-4 text-gray-700 text-sm text-center">
         {source}
       </p>
-    </div>
+    </div>  
   )
 }

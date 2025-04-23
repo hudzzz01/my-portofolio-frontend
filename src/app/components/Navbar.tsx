@@ -60,12 +60,12 @@ export default function Navbar() {
         <div className={`w-full h-15 md:h-27 border-b border-black flex justify-between items-center shadow-lg fixed z-50 ${themeLight ? "bg-gray-800 text-white" : "bg-white text-black"} transition-colors duration-500 ease-in-out`}>
             <div className=' items-center text-center jus'>
                 {/* <Image src="/logo_company_example(1).png" alt="logo" width={200} height={500} /> */}
-                <div className='font-bold text-2xl ms-40 text-red-500 italic' >Work in progress</div>
+                {/* <div className='font-bold text-2xl ms-40 text-red-500 italic' >Work in progress</div> */}
             </div>
             <div className='gap-10 me-20 hidden md:flex'>
                 {menu.map((item, index) => {
                     return (
-                        <div onClick={() => handleClickNavbarButton(item)} key={index} className={` ${index == menu.length - 1 ? "rounded-full ps-2" : "rounded-md px-2"} pt-2 text-lg hover:text-white hover:bg-orange-500 text-center items-center cursor-pointer ${themeLight ? "bg-gray-800 text-white" : "bg-white text-black"} transition-colors duration-500 ease-in-out`}>
+                        <div onClick={() => handleClickNavbarButton(item)} key={index} className={` ${index == menu.length - 1 ? "rounded-full ps-2" : "rounded-md px-2"} pt-2 text-lg hover:text-white hover:bg-blue-500 text-center items-center cursor-pointer ${themeLight ? "bg-gray-800 text-white" : "bg-white text-black"} transition-colors duration-500 ease-in-out`}>
                             {item}
                         </div>
                     )
@@ -81,12 +81,12 @@ export default function Navbar() {
                         <CiDark size={30} />
                     }
                 </div>
-                <div className='cursor-pointer' onClick={handleSmallMenu}>
+                {/* <div className='cursor-pointer' onClick={handleSmallMenu}>
                     <CiMenuKebab />
 
-                </div>
+                </div> */}
             </div>
-            {isSmallMenu &&
+            {/* {isSmallMenu &&
 
                 <div className={`absolute right-0 top-15 w-50 p-5 ${themeLight ? "bg-gray-800 text-slate-200" : "bg-white  text-black"} transition-colors duration-500 ease-in-out`}>
                     {menu.map((item, index) => {
@@ -98,7 +98,7 @@ export default function Navbar() {
                     })}
                 </div>
 
-            }
+            } */}
 
         </div>
 

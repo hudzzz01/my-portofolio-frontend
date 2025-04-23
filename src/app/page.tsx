@@ -13,11 +13,15 @@ export default function Home() {
   return (
     <div className="">
       <Provider store={store}> 
+         
             <Navbar/>
-            <Hero/>
-            <AboutMe/>
-            <Porto/>
-            <Footer />
+            <div className="w-full flex flex-col justify-center items-center">
+              <Hero/>
+              <AboutMe/>
+              <Porto/>
+              <Footer />
+            </div>
+           
        </Provider>
     </div>
     
