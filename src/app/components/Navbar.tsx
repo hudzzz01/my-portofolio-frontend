@@ -56,7 +56,7 @@ export default function Navbar() {
         <div className={`w-full h-15 md:h-27 border-b border-black flex justify-between items-center shadow-lg fixed z-50 ${themeLight ? "bg-gray-800 text-white" : "bg-white text-black"} transition-colors duration-500 ease-in-out`}>
             <div className=' items-center text-center jus'>
                 {/* <Image src="/logo_company_example(1).png" alt="logo" width={200} height={500} /> */}
-                {/* <div className='font-bold text-2xl ms-40 text-red-500 italic' >Work in progress</div> */}
+                {themeLight &&     <div className='font-bold text-2xl ms-40 text-red-500 italic' >Work in progress</div>}
             </div>
             <div className='gap-10 me-20 hidden md:flex'>
                 {menu.map((item, index) => {
