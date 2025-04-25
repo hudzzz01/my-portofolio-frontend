@@ -28,6 +28,15 @@ export default function Hero() {
   return (
     <div className='w-full max-h-300 flex'>
         <div className=' gap-4 xl:pt-27 w-full sm:h-300 p-3 md:p-10 flex sm:flex-col  lg:flex-row  justify-center items-center hover:p-0 transition-all duration-800 ease-in-out xl:gap-0'>
+            
+            {
+                !themeLight ? 
+                <Image className='absolute w-full opacity-15' style={{zIndex: -1}} width={2000} height={2000} src='/my_line_art_scale.png' alt="retro computer png"/>
+                
+                :
+                <Image className='absolute w-full opacity-15' style={{zIndex: -1}} width={2000} height={2000} src='/retro-computer.png' alt="retro computer png"/>
+            }
+            
             <div className='sm:w-full lg:w-1/3 h-100 flex flex-col justify-center sm:gap-10 sm:items-center lg:items-start lg:gap-1 lg:ms-30'>
                 <div className={`w-full mb-10 md:ms-10 ${themeLight ? "text-slate-300" : "text-text-gray-800"} transition-all duration-300 ease-in-out`}>
                     <div className=''>
